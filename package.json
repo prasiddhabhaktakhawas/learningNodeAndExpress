@@ -1,0 +1,26 @@
+{
+  "name": "learningnodeandexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-intro.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon -L app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prasiddhabhaktakhawas/learningNodeAndExpress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prasiddhabhaktakhawas/learningNodeAndExpress/issues"
+  },
+  "homepage": "https://github.com/prasiddhabhaktakhawas/learningNodeAndExpress#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
