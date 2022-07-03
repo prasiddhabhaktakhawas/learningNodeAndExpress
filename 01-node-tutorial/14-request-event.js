@@ -6,7 +6,7 @@ const http = require('http')
     
 // Using Event Emitter API
 const server = http.createServer()
-// behind the scenes, server is emitting request event as server extends EventListener
+// behind the scenes, server is emitting request event as server extends EventEmitter
 server.on('request',(req,res)=>{
     res.end('Welcome')
 })
