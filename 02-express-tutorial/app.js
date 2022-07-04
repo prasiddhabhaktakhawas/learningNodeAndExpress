@@ -1,16 +1,9 @@
 const express = require('express')
 const app = express()
+const logger = require('./logger')     //imported from logger.js
 
 // req => middleware => res
 
-const logger = (req,res,next)=>{    //express supplies req, res and next
-    const method = req.method
-    const url = req.url
-    const time = new Date().getFullYear()
-    console.log(method,url,time)
-    // res.send('testing')  //middle ware should always point to next or should just end get request there by sending res.send
-    next()  // simply next() passes it on the method that triggered it, here: app.get()
-}
 
 app.get('/',logger,(req,res)=>{ //immediately goes to logger funtion without printing start and end console logs
     console.log('start')
@@ -19,6 +12,9 @@ app.get('/',logger,(req,res)=>{ //immediately goes to logger funtion without pri
 })
 app.get('/about', logger, (req,res)=>{
     res.send('about')
+})
+app.get('/api/products', logger, (req,res)=>{
+    res.send('products')
 })
 
 app.listen(5000, ()=>{
